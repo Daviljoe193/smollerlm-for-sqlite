@@ -31,3 +31,7 @@ Now you can finally do the dirty and run it. Just load that `.sql` file plus the
 On my mobile Kaby Lake i5, inference in DB Browser for SQLite runs at between 0.1 - 0.2 tokens per second, though this is simply due to how unoptimal SQLite is for running an LLM. Once it hits the stopping string, the rest of the inferences for the remaining tokens will only take 2 to 2.5 seconds each. This is what it's like not having fancy loops. :3
 
 That's... it, really. The default inference params are a temperature of 0.8, a top_p of 0.9, a top_k of 40, a min_p of 0.1, and a repetition penalty of 1.2 (At 10 million parameters, SmollerLM 10M really needs this).
+
+One more note, you can run mehmetkeremturkcan's other SmollerLM models, but there's a catch. You need to replace the model string, which is easy, but you also need to do a find and replace of all `60`'s in the code with whatever the third value on the shape for `model.embed_tokens.weight`. For the 48M parameter model, it's `288`, so all `60`'s become `288`'s, and it'll "just work" as long as it's the same ChatML varient. If this sounds stupid, congratulations on getting as far as you did without questioning the rest of this! :D
+
+![](https://raw.githubusercontent.com/Daviljoe193/smollerlm-for-sqlite/refs/heads/main/notfutureproofed-butitworked.png)
