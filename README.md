@@ -12,7 +12,7 @@ First, you need the dependencies (In a VENV, silly c:) to create the database.
 
 `pip install torch transformers`
 
-And then, you need to run
+And then, you need to run (Note: This will pull in my beloved [SmollerLM2-10M-sftb](https://huggingface.co/mehmetkeremturkcan/SmollerLM2-10M-sftb) from [mehmetkeremturkcan](https://huggingface.co/mehmetkeremturkcan) on HuggingFace)
 
 `python db_build.py`
 
