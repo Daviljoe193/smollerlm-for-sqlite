@@ -2,7 +2,7 @@
 
 For those weirdos who see [llama2.c](https://github.com/karpathy/llama2.c) and think "Hmmm... what if it ran entirely in SQLite?".
 
-![](https://raw.githubusercontent.com/Daviljoe193/smollerlm-for-sqlite/refs/heads/main/just-an-llm-where-it-doesnt-belong.png?token=GHSAT0AAAAAADUBPMTU37QBCJ75BP4R3FXA2NSEUEA)
+![](https://raw.githubusercontent.com/Daviljoe193/smollerlm-for-sqlite/refs/heads/main/just-an-llm-where-it-doesnt-belong.png)
 
 ___
 
