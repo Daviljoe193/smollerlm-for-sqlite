@@ -35,3 +35,10 @@ That's... it, really. The default inference params are a temperature of 0.8, a t
 One more note, you can run mehmetkeremturkcan's other SmollerLM models, but there's a catch. You need to replace the model string, which is easy, but you also need to do a find and replace of all `60`'s in the code with whatever the third value on the shape for `model.embed_tokens.weight`. For the 48M parameter model, it's `288`, so all `60`'s become `288`'s, and it'll "just work" as long as it's the same ChatML varient. If this sounds stupid, congratulations on getting as far as you did without questioning the rest of this! :D
 
 ![](https://raw.githubusercontent.com/Daviljoe193/smollerlm-for-sqlite/refs/heads/main/notfutureproofed-butitworked.png)
+
+
+___
+
+UPDATE: Just added proper `HuggingFaceTB/SmolLM2-135M-Instruct` support via a modified DB creation script. It's SLOW (Took 8 hours and 41 minutes to generate 431 tokens), and uses about 4.2 gigabytes of ram plus 1.7 gigabytes of hard disk space, but it works. To use this model instead, run the new `db_build_135m.py` script the same way you'd run the `db_build.py` script.
+
+![](https://raw.githubusercontent.com/Daviljoe193/smollerlm-for-sqlite/refs/heads/main/biggestmodelitseverrun.png)
